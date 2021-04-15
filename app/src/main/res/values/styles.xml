@@ -2,6 +2,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor" tools:targetApi="l">@color/space</item> <!-- шторка уведомлений окрашивание -->
-    <item name="color">@color/space</item>
+        <item name="materialButtonStyle">@style/Button.white</item>
+
+        <item name="color">@color/space</item>
+    </style>
+
+    <style name="Button.white" parent="Widget.MaterialComponents.Button">
+        <item name="materialButtonStyle">@drawable/button</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="background">@drawable/button</item>
     </style>
 </resources>

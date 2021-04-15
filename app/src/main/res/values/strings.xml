@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Astronaut</string>
+    <string name="title_activity_expedition">Expedition</string>
+    <string name="Expidition">Исследование</string>
+    <string name="vostochniy">Восточный</string>
+    <string name="jiuquan">Цзюцюа́нь</string>
+    <string name="baikonur">Байконур</string>
+    <string name="lunokhod">Лунoход-1 V2</string>
+    <string name="lunoTime">10.11 1970 7:44</string>
+    <string name="lunokhod2">Луноход-2 V2</string>
+    <string name="lunoTime2">16.01 1973 3:10</string>
+
 </resources>
