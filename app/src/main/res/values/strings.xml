@@ -9,5 +9,7 @@
     <string name="lunoTime">10.11 1970 7:44</string>
     <string name="lunokhod2">Луноход-2 V2</string>
     <string name="lunoTime2">16.01 1973 3:10</string>
+    <string name="back">назад</string>
+    <string name="planet">К планетам</string>
 
 </resources>

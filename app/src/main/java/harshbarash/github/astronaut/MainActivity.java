@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         SliderAdapter sliderAdapter = new SliderAdapter(this);
 
         mSlideViewPager.setAdapter(sliderAdapter);
-        mSlideViewPager.setCurrentItem(1);
+        mSlideViewPager.setCurrentItem(1); //установка нужной планеты по-умолчанию
     }
 
 

@@ -2,8 +2,6 @@ package harshbarash.github.astronaut;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +11,8 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
-public class SliderAdapter extends PagerAdapter {
+public class SliderAdapter<val> extends PagerAdapter {
 
     Context context;
     Button button;
@@ -32,13 +29,6 @@ public class SliderAdapter extends PagerAdapter {
             R.drawable.moon
     };
 
-    public int[] slide_bottom = {
-
-            R.drawable.mars,
-            R.drawable.earth,
-            R.drawable.moon //todo
-    };
-
     @Override
     public int getCount() {
         return slide_images.length;
@@ -49,6 +39,7 @@ public class SliderAdapter extends PagerAdapter {
         return view == (RelativeLayout) o;
     }
 
+
     @NonNull
     @Override
     public Object instantiateItem (@NonNull ViewGroup container, int position) {
@@ -58,17 +49,25 @@ public class SliderAdapter extends PagerAdapter {
 
         Button button = view.findViewById(R.id.change);
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 openExpedition();
             }
 
             private void openExpedition() {
+                if ( position == 1) {
                     Intent inent = new Intent(context, Expedition.class);
                     context.startActivity(inent);
+                } else if ( position == 2) {
+                    Intent inent = new Intent(context, MoonExpedition.class);
+                    context.startActivity(inent);
+                } else {
+                    Intent inent = new Intent(context, MarsExpedition.class);
+                    context.startActivity(inent);
                 }
+            }
         });
-
 
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
@@ -85,5 +84,6 @@ public class SliderAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, @NonNull Object object){
         container.removeView((RelativeLayout)object);
     }
+
 
 }

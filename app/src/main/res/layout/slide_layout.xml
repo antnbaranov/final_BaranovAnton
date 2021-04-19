@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:id="@+id/slide_image"
         android:layout_width="match_parent"
@@ -15,21 +16,34 @@
         android:layout_marginTop="73dp"
         app:srcCompat="@drawable/earth" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/slide_image"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_sheet_background"
-        android:orientation="horizontal"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/slide_image"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@drawable/bottom_sheet_background"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" >-->
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical" />-->
+<!--    </ScrollView>-->
 
     <Button
         android:id="@+id/change"
         style="@style/Button.white"
-        android:layout_width="148dp"
+        android:layout_width="165dp"
         android:layout_height="52dp"
         android:layout_alignBottom="@+id/slide_image"
         android:layout_alignParentStart="true"
@@ -37,15 +51,42 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="7dp"
         android:layout_marginTop="9dp"
-        android:layout_marginEnd="255dp"
+        android:layout_marginEnd="239dp"
         android:layout_marginBottom="512dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/white"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="@font/roboto_black"
         android:text="@string/Expidition"
+        android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
+
+    <FrameLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bottom_sheet_background"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="300dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_remove_24">
+        </ImageView>
+
+    </FrameLayout>
 
 </RelativeLayout>
