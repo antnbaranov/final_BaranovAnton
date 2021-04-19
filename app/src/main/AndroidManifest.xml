@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MoonExpedition"></activity>
+        <activity android:name=".Lunokhod"></activity>
+        <activity android:name=".Rover"></activity>
+
         <activity android:name=".MarsExpedition" />
         <activity android:name=".MainActivity">
             <intent-filter>

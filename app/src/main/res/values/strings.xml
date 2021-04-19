@@ -12,5 +12,7 @@
     <string name="back">назад</string>
     <string name="planet">К планетам</string>
     <string name="speed">Скорость</string>
+    <string name="country">Россия</string>
+    <string name="add">+ Добавить новый</string>
 
 </resources>

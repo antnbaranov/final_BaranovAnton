@@ -53,14 +53,21 @@
                     android:layout_gravity="center"
                     android:orientation="vertical">
 
-                    <pl.droidsonroids.gif.GifImageView
-                        android:id="@+id/gif"
+                    <ImageButton
+                        android:id="@+id/specialbutton"
                         android:layout_width="match_parent"
-                        android:layout_height="264dp"
-                        app:cardCornerRadius="25dp"
-                        android:src="@drawable/mars1">
+                        android:layout_height="match_parent"
+                        android:background="@drawable/marsse">
+                    </ImageButton>
 
-                    </pl.droidsonroids.gif.GifImageView>
+<!--                    <pl.droidsonroids.gif.GifImageView-->
+<!--                        android:id="@+id/gif"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="264dp"-->
+<!--                        app:cardCornerRadius="25dp"-->
+<!--                        android:src="@drawable/mars1">-->
+
+<!--                    </pl.droidsonroids.gif.GifImageView>-->
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </GridLayout>
