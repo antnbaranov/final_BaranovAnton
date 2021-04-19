@@ -113,22 +113,33 @@
                 app:cardCornerRadius="25dp"
                 app:cardElevation="5dp">
 
-                <LinearLayout
 
-                    android:layout_width="193dp"
-                    android:layout_height="387dp"
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    android:rotation="270"
+                    android:value="300"
+                    android:valueFrom="0"
+                    android:valueTo="1000"
+                    app:thumbColor="#000000"
+                    app:trackColorActive="#FF6F00" />
 
-                    <ImageButton
-                        android:id="@+id/btn4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/moon_extraction">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/speed"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_alignParentBottom="true">
 
-                    </ImageButton>
+            </TextView>
 
-                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView

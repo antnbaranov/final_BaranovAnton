@@ -59,7 +59,7 @@
                         android:id="@+id/btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/ll2">
+                        android:background="@drawable/mmm2">
 
                     </ImageButton>
                 </LinearLayout>
@@ -84,7 +84,7 @@
                         android:id="@+id/btn2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/ll1">
+                        android:background="@drawable/mm1">
 
                     </ImageButton>
                 </LinearLayout>

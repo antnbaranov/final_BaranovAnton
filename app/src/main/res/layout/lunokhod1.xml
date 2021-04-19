@@ -15,79 +15,65 @@
             android:id="@+id/change"
             style="@style/Button.white"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
 
             android:layout_width="169dp"
             android:layout_height="match_parent"
             android:background="@drawable/button"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/roboto_black"
-            android:text="@string/planet"
+            android:text="@string/Expidition"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <GridLayout
-            android:layout_width="411dp"
-            android:layout_height="603dp"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="15dp"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/gif"
+                        android:layout_width="match_parent"
+                        android:layout_height="264dp"
+                        app:cardCornerRadius="25dp"
+                        android:src="@drawable/moongif2">
+
+                    </pl.droidsonroids.gif.GifImageView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="411dp"
+            android:layout_height="398dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:columnCount="2"
             android:columnOrderPreserved="false"
             android:rowCount="4">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/ll2">
-
-                    </ImageButton>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/btn2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/ll1">
-                    </ImageButton>
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
@@ -110,7 +96,7 @@
                         android:id="@+id/btn3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/newmoon">
+                        android:background="@drawable/lll1">
                     </ImageButton>
 
                 </LinearLayout>
@@ -127,21 +113,32 @@
                 app:cardCornerRadius="25dp"
                 app:cardElevation="5dp">
 
-                <LinearLayout
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:rotation="270"
+            android:value="300"
+            android:valueFrom="0"
+            android:valueTo="1000"
+            app:thumbColor="#FFEB3B"
+            app:trackColorActive="#6F51FF" />
 
-                    android:layout_width="193dp"
-                    android:layout_height="387dp"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speed"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            android:layout_gravity="bottom"
+            android:textStyle="bold"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true">
 
-                    <ImageButton
-                        android:id="@+id/btn4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/moon_extraction">
-                    </ImageButton>
+        </TextView>
 
-                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -162,9 +159,9 @@
 
                     <ImageButton
                         android:id="@+id/btn5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/todomoon">
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/move">
 
                     </ImageButton>
                 </LinearLayout>
@@ -173,42 +170,64 @@
         </GridLayout>
 
         <GridLayout
-            android:layout_width="406dp"
-            android:layout_height="match_parent"
+            android:layout_width="411dp"
+            android:layout_height="603dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="-10dp"
             android:columnCount="2"
             android:columnOrderPreserved="false"
             android:rowCount="4">
 
-            <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="5dp">
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btn6"
+                    android:layout_width="190dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/bur">
 
-                    <ImageButton
-                        android:id="@+id/btn6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/tempmoon">
+                </ImageButton>
 
-                    </ImageButton>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn2"
+                    android:layout_width="175dp"
+                    android:layout_height="185dp"
+                    android:background="@drawable/laba">
+                </ImageButton>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         </GridLayout>
-
 
     </LinearLayout>
 
