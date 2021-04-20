@@ -106,10 +106,10 @@ public class SliderAdapter<val> extends PagerAdapter {
                     Intent inent = new Intent(context, Expedition.class);
                     context.startActivity(inent);
                 } else if ( position == 2) {
-                    Intent inent = new Intent(context, Rover.class);
+                    Intent inent = new Intent(context, Lunokhod.class);
                     context.startActivity(inent);
                 } else {
-                    Intent inent = new Intent(context, Lunokhod.class);
+                    Intent inent = new Intent(context, Rover.class);
                     context.startActivity(inent);
                 }
             }
