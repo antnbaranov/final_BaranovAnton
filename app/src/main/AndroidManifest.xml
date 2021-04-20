@@ -11,7 +11,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MoonExpedition"></activity>
         <activity android:name=".Lunokhod"></activity>
+        <activity android:name=".Lunokhod2"></activity>
         <activity android:name=".Rover"></activity>
+        <activity android:name=".Rover2"></activity>
+
 
         <activity android:name=".MarsExpedition" />
         <activity android:name=".MainActivity">

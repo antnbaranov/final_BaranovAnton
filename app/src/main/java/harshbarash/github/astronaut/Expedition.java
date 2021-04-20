@@ -11,9 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Expedition extends Activity {
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,15 @@ public class Expedition extends Activity {
 
         setContentView(R.layout.activity_expedition);
 
+        btn = (Button)findViewById( R.id.change);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Expedition.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
 
     }
