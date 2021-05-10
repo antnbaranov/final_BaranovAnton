@@ -184,8 +184,49 @@
             android:columnOrderPreserved="false"
             android:rowCount="4">
 
-            <androidx.cardview.widget.CardView
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/textbarometr"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:gravity="center"
+                    android:text="Барометр"
+                    android:textSize="25sp"
+                    android:textColor="#FFB800"
+                    android:fontFamily="@font/roboto_bold"/>
+
+
+                <TextView
+                    android:id="@+id/barometr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="30мбар"
+                    android:textColor="#9986F0"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_margin="10dp"
                 android:layout_marginLeft="15dp"
@@ -199,19 +240,37 @@
                     android:layout_gravity="center"
                     android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/btn6"
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/text"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/tempmars">
-                    </ImageButton>
+                        android:layout_height="43dp"
+                        android:gravity="center"
+                        android:text="@string/now"
+                        android:textSize="25sp"
+                        android:textColor="#9986F0"
+                        android:fontFamily="@font/roboto_bold"/>
+
+
+                    <TextView
+                        android:id="@+id/texttemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="30"
+                        android:textColor="#FFB800"
+                        android:textSize="58sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+
+
         </GridLayout>
 
-
     </LinearLayout>
+
 
 </ScrollView>
 

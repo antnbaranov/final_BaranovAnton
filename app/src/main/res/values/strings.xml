@@ -14,5 +14,7 @@
     <string name="speed">Скорость</string>
     <string name="country">Россия</string>
     <string name="add">+ Добавить новый</string>
+    <string name="temp">Температура</string>
+    <string name="now">Температура</string>
 
 </resources>

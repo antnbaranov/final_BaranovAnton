@@ -3,12 +3,15 @@ package harshbarash.github.astronaut;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class MoonExpedition extends AppCompatActivity {
+public class MoonExpedition extends AppCompatActivity implements SensorEventListener {
     Button btn;
     ImageButton btnm1, btnm2;
 
@@ -46,6 +49,16 @@ public class MoonExpedition extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
     }
 }
 
