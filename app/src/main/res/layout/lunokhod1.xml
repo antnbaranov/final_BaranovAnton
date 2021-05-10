@@ -218,7 +218,8 @@
                         android:id="@+id/btn6"
                         android:layout_width="190dp"
                         android:layout_height="180dp"
-                        android:background="@drawable/bur3">
+                        android:background="@drawable/bur3"
+                        tools:ignore="ContentDescription">
 
                     </ImageButton>
 
@@ -284,7 +285,7 @@
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text="Спидометр"
+                        android:text="@string/speeddd"
                         android:textColor="@color/black"
                         android:textSize="28sp"
                         android:textStyle="bold" />
@@ -296,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text="30км/ч"
+                        android:text="@string/_30h"
                         android:textColor="#FFEB3B"
                         android:textSize="40sp" />
 
@@ -327,7 +328,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
 
-                        android:text='Магнитометр'
+                        android:text='@string/magnet'
                         android:textColor="#9986F0"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -339,7 +340,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='54.0'
+                        android:text='@string/_54_0'
                         android:textColor="#000000"
                         android:textSize="40sp" />
 
@@ -372,7 +373,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
 
-                        android:text='Освещенность'
+                        android:text='@string/light'
                         android:textColor="#000000"
                         android:textSize="23sp"
                         android:textStyle="bold" />
@@ -384,7 +385,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='126лк'
+                        android:text='@string/_126'
                         android:textColor="#9986F0"
                         android:textSize="40sp" />
 
@@ -423,8 +424,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-
-                        android:text='Гравитация'
+                        android:text='@string/gravitation'
                         android:textColor="#FFEB3B"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -436,9 +436,9 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='154.0'
+                        android:text='@string/_154_0'
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                     <TextView
                         android:id="@+id/gravityY"
@@ -447,9 +447,9 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='254.0'
+                        android:text='@string/_254_0'
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                     <TextView
                         android:id="@+id/gravityZ"
@@ -458,9 +458,9 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='354.0'
+                        android:text='@string/_354_0'
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
 
                 </LinearLayout>
@@ -501,7 +501,8 @@
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:background="@drawable/nsew"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    tools:ignore="ContentDescription" />
 
 
 

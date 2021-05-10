@@ -16,5 +16,19 @@
     <string name="add">+ Добавить новый</string>
     <string name="temp">Температура</string>
     <string name="now">Температура</string>
+    <string name="russia">Russia</string>
+    <string name="_30">30мбар</string>
+    <string name="_30_">30</string>
+    <string name="barometr">Барометр</string>
+    <string name="gravitation">Гравитация</string>
+    <string name="_154_0">154.0</string>
+    <string name="_354_0">354.0</string>
+    <string name="_254_0">254.0</string>
+    <string name="light">Освещенность</string>
+    <string name="_126">126лк</string>
+    <string name="_30h">30км/ч</string>
+    <string name="magnet">Магнитометр</string>
+    <string name="_54_0">54.0</string>
+    <string name="speeddd">Спидометр</string>
 
 </resources>

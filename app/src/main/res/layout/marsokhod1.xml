@@ -229,7 +229,8 @@
                         android:id="@+id/china"
                         android:layout_width="175dp"
                         android:layout_height="185dp"
-                        android:background="@drawable/laba3">
+                        android:background="@drawable/laba3"
+                        tools:ignore="ContentDescription">
                     </ImageButton>
 
                 </LinearLayout>
@@ -282,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text="30км/ч"
+                        android:text="@string/_30h"
                         android:textColor="#FF6F00"
                         android:textSize="40sp" />
 
@@ -312,8 +313,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-
-                        android:text='Магнитометр'
+                        android:text='@string/magnet'
                         android:textColor="#9986F0"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -325,7 +325,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='54.0'
+                        android:text='@string/_54_0'
                         android:textColor="#000000"
                         android:textSize="40sp" />
 
@@ -358,7 +358,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
 
-                        android:text='Освещенность'
+                        android:text='@string/light'
                         android:textColor="#000000"
                         android:textSize="23sp"
                         android:textStyle="bold" />
@@ -372,7 +372,8 @@
                         android:gravity="center"
                         android:text='126лк'
                         android:textColor="#9986F0"
-                        android:textSize="40sp" />
+                        android:textSize="40sp"
+                        tools:ignore="HardcodedText" />
 
                     <View
                         android:id="@+id/light"
@@ -409,8 +410,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-
-                        android:text='Гравитация'
+                        android:text='@string/gravitation'
                         android:textColor="#FF6F00"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -422,9 +422,9 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='154.0'
+                        android:text='@string/_154_0'
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                     <TextView
                         android:id="@+id/gravityY"
@@ -433,9 +433,9 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='254.0'
+                        android:text='@string/_254_0'
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                     <TextView
                         android:id="@+id/gravityZ"
@@ -444,9 +444,9 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text='354.0'
+                        android:text='@string/_354_0'
                         android:textColor="#000000"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
 
                 </LinearLayout>
@@ -482,13 +482,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/compass"
-                    android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/nsew"
-                    android:gravity="center" />
-
+                android:id="@+id/compass"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nsew"
+                android:gravity="center"
+                    tools:ignore="ContentDescription" />
 
 
             </LinearLayout>

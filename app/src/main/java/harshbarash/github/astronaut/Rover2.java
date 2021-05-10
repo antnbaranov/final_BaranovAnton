@@ -57,8 +57,12 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
     private float azimuth = 0f;
     private float currectAzimuth = 0f;
 
+    private ImageView image;
+    private float currentDegree = 0f;
+    private SensorManager mSensorManager;
 
-    @SuppressLint("ObsoleteSdkInt")
+
+    @SuppressLint({"ObsoleteSdkInt", "CutPasteId"})
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.marsokhod2);
@@ -79,6 +83,12 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
         zTextView = findViewById(R.id.gravityZ);
         ImageView = (ImageView)findViewById(R.id.compass);
 
+        image = (ImageView) findViewById(R.id.compass);
+
+//                tvHeading  = (TextView)findViewById(R.id.tvHeading);
+
+
+        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
@@ -109,6 +119,7 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
         maxValue = lightSensor.getMaximumRange();
 
         lightEventListener = new SensorEventListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onSensorChanged(SensorEvent event) {
                 float value = event.values[0];
@@ -124,7 +135,8 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
             }
         };
 
-//
+
+
         btn = (Button)findViewById( R.id.change);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,7 +149,6 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
 
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -149,12 +160,11 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
         if(sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY)!=null);
         sensorManager.registerListener(this, mGravity, SensorManager.SENSOR_DELAY_FASTEST);
 
-//        sensorManager.registerListener( this,
-//                sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
-//                SensorManager.SENSOR_DELAY_GAME);
-        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                SensorManager.SENSOR_DELAY_GAME);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
@@ -164,7 +174,6 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
             float magZ = event.values[2];
 
             double magnitude = Math.sqrt((magX * magX) + (magY * magY) + (magZ * magZ));
-//            float magnitudeF = (float) magnitude;
 
             magnit.setText(DECIMAL_FORMATTER.format(magnitude) + " \u00B5Тесла");
         }
@@ -172,41 +181,25 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
         yTextView.setText(event.values[1]+ "М/c²");
         zTextView.setText(event.values[2]+ "М/c²");
 
-        final float alpha = 0.97f;
-        synchronized (this) {
-            if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-                mmGravity[0] = alpha*mmGravity[0]+(1-alpha)*event.values[0];
-                mmGravity[1] = alpha*mmGravity[1]+(1-alpha)*event.values[1];
-                mmGravity[2] = alpha*mmGravity[2]+(1-alpha)*event.values[2];
+        float degree = Math.round(event.values[0]);
 
-            }
+//                tvHeading.setText((int) degree);
 
-            if(event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD){
-                mGeomagnetic[0] = alpha*mGeomagnetic[0]+(1-alpha)*event.values[0];
-                mGeomagnetic[1] = alpha*mGeomagnetic[1]+(1-alpha)*event.values[1];
-                mGeomagnetic[2] = alpha*mGeomagnetic[2]+(1-alpha)*event.values[2];
-            }
+        RotateAnimation ra = new RotateAnimation(
+                currentDegree,
+                -degree,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF,
+                0.5f);
 
-            float R[] = new float[9];
-            float I[] = new float[9];
-            boolean success = SensorManager.getRotationMatrix(R,I,mmGravity,mGeomagnetic);
-            if (success) {
-                float orientation[] = new float[3];
-                SensorManager.getOrientation(R,orientation);
-                azimuth = (float)Math.toDegrees(orientation[0]);
-                azimuth = (azimuth + 360)% 360;
+        ra.setDuration(210);
 
-                Animation anim = new RotateAnimation(-currectAzimuth, -azimuth, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, -0.5f);
-                currectAzimuth = azimuth;
+        ra.setFillAfter(true);
 
-                anim.setDuration(500);
-                anim.setRepeatCount(0);
-                anim.setFillAfter(true);
-
-                ImageView.startAnimation(anim);
-            }
-        }
+        image.startAnimation(ra);
+        currentDegree = -degree;
     }
+
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
@@ -221,6 +214,8 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
         if(sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY)!=null);
         sensorManager.unregisterListener(this, mGravity);
         sensorManager.unregisterListener(this);
+
+        mSensorManager.unregisterListener(this);
     }
 
 
@@ -258,6 +253,7 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
 //        Toast.makeText(this, "Ожидаем подключение к GPS", Toast.LENGTH_SHORT).show();
     }
 
+    @SuppressLint("SetTextI18n")
     private void updateSpeed(CLocation location) {
         float nCurrentSpeed = 0;
 
@@ -288,21 +284,3 @@ public class Rover2 extends Activity implements LocationListener, SensorEventLis
 
 }
 
-
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//        setContentView(R.layout.marsokhod2);
-//
-//        btn = (Button)findViewById( R.id.change);
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(Rover2.this, MarsExpedition.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
-//
-//    }
-//}

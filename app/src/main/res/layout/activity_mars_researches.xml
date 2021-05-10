@@ -111,7 +111,8 @@
                         android:id="@+id/btn3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/newmars">
+                        android:background="@drawable/newmars"
+                        tools:ignore="ContentDescription">
 
                     </ImageButton>
                 </LinearLayout>
@@ -139,7 +140,8 @@
                         android:id="@+id/btn4"
                         android:layout_width="182dp"
                         android:layout_height="match_parent"
-                        android:background="@drawable/mars_extraction">
+                        android:background="@drawable/mars_extraction"
+                        tools:ignore="ContentDescription">
                     </ImageButton>
 
                 </LinearLayout>
@@ -165,7 +167,8 @@
                         android:id="@+id/btn5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/todomars">
+                        android:background="@drawable/todomars"
+                        tools:ignore="ContentDescription">
 
                     </ImageButton>
                 </LinearLayout>
@@ -206,7 +209,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="43dp"
                     android:gravity="center"
-                    android:text="Барометр"
+                    android:text="@string/barometr"
                     android:textSize="25sp"
                     android:textColor="#FFB800"
                     android:fontFamily="@font/roboto_bold"/>
@@ -218,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
                     android:gravity="center"
-                    android:text="30мбар"
+                    android:text="@string/_30"
                     android:textColor="#9986F0"
                     android:textSize="40sp" />
 
@@ -258,7 +261,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
                         android:gravity="center"
-                        android:text="30"
+                        android:text="@string/_30_"
                         android:textColor="#FFB800"
                         android:textSize="58sp" />
 
