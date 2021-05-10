@@ -3,8 +3,6 @@ package harshbarash.github.astronaut;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.AsyncQueryHandler;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -70,7 +68,7 @@ public class MarsExpedition extends AppCompatActivity implements SensorEventList
             isTemperatureSsensoreAvailable = false;
         }
 
-        btnm1 = (ImageButton)findViewById(R.id.btn);
+        btnm1 = (ImageButton)findViewById(R.id.rus);
         btnm1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +78,7 @@ public class MarsExpedition extends AppCompatActivity implements SensorEventList
             }
         });
 
-        btnm2 = (ImageButton)findViewById(R.id.btn2);
+        btnm2 = (ImageButton)findViewById(R.id.china);
         btnm2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

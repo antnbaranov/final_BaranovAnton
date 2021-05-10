@@ -30,7 +30,7 @@ public class MoonExpedition extends AppCompatActivity implements SensorEventList
             }
         });
 
-        btnm1 = (ImageButton)findViewById(R.id.btn);
+        btnm1 = (ImageButton)findViewById(R.id.rus);
         btnm1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +40,7 @@ public class MoonExpedition extends AppCompatActivity implements SensorEventList
             }
         });
 
-        btnm2 = (ImageButton)findViewById(R.id.btn2);
+        btnm2 = (ImageButton)findViewById(R.id.china);
         btnm2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

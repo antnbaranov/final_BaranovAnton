@@ -59,7 +59,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btn"
+                        android:id="@+id/rus"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/russia2">
@@ -84,7 +84,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btn2"
+                        android:id="@+id/china"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/china">
@@ -111,7 +111,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btn3"
+                        android:id="@+id/usa"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/usa">
@@ -137,7 +137,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btn4"
+                        android:id="@+id/rus2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/russia">

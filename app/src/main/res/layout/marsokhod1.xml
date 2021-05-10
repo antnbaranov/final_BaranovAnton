@@ -226,7 +226,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btn2"
+                        android:id="@+id/china"
                         android:layout_width="175dp"
                         android:layout_height="185dp"
                         android:background="@drawable/laba3">
